@@ -2,7 +2,8 @@ import { db } from "./firebase.js";
 
 import {
     collection,
-    addDoc
+    addDoc,
+    getDocs
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Prediction deadline
@@ -100,11 +101,61 @@ async function submitPrediction(){
 
     }
 
+    // Create or retrieve unique voter ID
 
-    await addDoc(collection(db,"predictions"),{
+let voterId = localStorage.getItem("voterId");
+
+if(!voterId){
+
+    voterId = crypto.randomUUID();
+
+    localStorage.setItem(
+        "voterId",
+        voterId
+    );
+
+}
+
+
+// Check if this browser already voted
+
+const snapshot =
+await getDocs(
+    collection(db,"predictions")
+);
+
+
+let alreadyVoted = false;
+
+
+snapshot.forEach(doc => {
+
+    const data = doc.data();
+
+    if(data.voterId === voterId){
+
+        alreadyVoted = true;
+
+    }
+
+});
+
+
+if(alreadyVoted){
+
+    alert(
+        "⚠️ You have already submitted a prediction."
+    );
+
+    return;
+
+}
+
+   await addDoc(collection(db,"predictions"),{
 
     name:name,
     team:selected,
+    voterId:voterId,
     revealed:false,
     time:new Date()
 
