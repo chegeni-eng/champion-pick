@@ -111,9 +111,24 @@ async function submitPrediction(){
 });
 
 
-    document.getElementById("message").innerHTML =
-    "✅ Your prediction is locked! Nobody can see it until the reveal.";
+   document.getElementById("message").innerHTML =
 
+`
+<div class="confirmation">
+
+<h3>✅ Prediction Locked!</h3>
+
+<p>Your champion choice:</p>
+
+<h2>🏆 ${selected}</h2>
+
+<p>
+Good luck! May your prediction win! 🎉
+</p>
+
+</div>
+`;
+    
 }
 
 
