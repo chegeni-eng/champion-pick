@@ -1,0 +1,66 @@
+body {
+font-family: Arial;
+background:#f5f7fb;
+text-align:center;
+}
+
+.container {
+background:white;
+max-width:500px;
+margin:40px auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px #ddd;
+}
+
+
+input,select {
+
+width:90%;
+padding:12px;
+margin:10px;
+font-size:16px;
+
+}
+
+
+.team {
+
+display:flex;
+align-items:center;
+gap:10px;
+
+padding:12px;
+border:1px solid #ddd;
+margin:8px;
+border-radius:12px;
+cursor:pointer;
+
+}
+
+
+.team:hover {
+
+background:#eef5ff;
+
+}
+
+
+button {
+
+background:#2563eb;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+
+}
+
+
+button:hover {
+
+background:#1d4ed8;
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Champion Pick Admin 🏆</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>🏆 Admin Dashboard</h1>
+
+
+<div id="loginBox">
+
+<input 
+id="password"
+type="password"
+placeholder="Admin password"
+>
+
+
+<button id="loginBtn">
+Login
+</button>
+
+</div>
+
+
+
+<div id="dashboard" style="display:none;">
+
+
+<h2>Predictions</h2>
+
+
+<p>
+Total Predictions:
+<span id="count">0</span>
+</p>
+
+
+<table border="1" width="100%">
+
+<thead>
+
+<tr>
+<th>Name</th>
+<th>Champion</th>
+</tr>
+
+</thead>
+
+
+<tbody id="results">
+
+</tbody>
+
+
+</table>
+
+
+<br>
+
+
+<button id="exportBtn">
+📥 Export CSV
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<script type="module" src="admin.js"></script>
+
+
+</body>
+
+</html>
