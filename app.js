@@ -116,7 +116,7 @@ async function submitPrediction(){
 `
 <div class="confirmation">
 
-<h3>✅ Prediction Locked!</h3>
+<h3>✅ Prediction Submitted!</h3>
 
 <p>Your champion choice:</p>
 
