@@ -7,7 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Prediction deadline
-const DEADLINE = new Date("2026-07-09T20:00:00");
+const DEADLINE = new Date("2026-07-09T22:00:00");
 
 const teams = [
 
